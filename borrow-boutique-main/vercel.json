@@ -1,4 +1,12 @@
 {
+  "version": 2,
+  "framework": "solidstart",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/nitro"
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
