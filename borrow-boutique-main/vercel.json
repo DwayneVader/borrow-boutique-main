@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "framework": "solidstart",
-  "builds": [
+  "cleanUrls": true,
+  "routes": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "/_vercel/insights(.*)",
+      "dest": "/_vercel/insights$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
     }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
